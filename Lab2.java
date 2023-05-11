@@ -9,7 +9,6 @@ public class Lab2 {
         }
         // вивід на екран початкову матрицю
         System.out.println("Початкова Матриця");
-//        System.out.println("------");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.printf("%3d", a[i][j]);
@@ -26,15 +25,14 @@ public class Lab2 {
         }
         // вивід на екран транспоновану матрицю
         System.out.println("Нова матриця");
-//        System.out.println("------");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.printf("%3d", a[i][j]);
             }
             System.out.println();
         }
+        //вибір мінімальних елементів та вивід суми
         System.out.println("Мінімальні елементи кожного стовпця");
-//        System.out.println("------");
         int sum = 0;
         for (int j = 0; j < a[0].length; j++) {
             int min = a[0][j];
