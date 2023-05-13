@@ -2,7 +2,7 @@ import java.util.Arrays;
 //Відсортувати слова заданого тексту за зростанням кількості голосних літер. тип Str.
 public class Lab3 {
 public static void main(String[] args) {
-        String str = "programming is hard but i am ready to fight";
+        String str = "programming is hard but i am ready to learning";
         String[] words = str.split(" ");
         for (int i = 0; i < words.length; i++) {
         System.out.print(words[i] + " ");
@@ -12,7 +12,7 @@ public static void main(String[] args) {
         System.out.print(words[1].charAt(i) + " ");
         }
         System.out.println();
-        String vowel = "aeiouy"; // строка из гласных
+        String vowel = "aeiouy"; // голосні
         System.out.println("Індекс кожної букви:");
         for (int i = 0; i < words.length; i++) {
         for (int j = 0; j < words[i].length(); j++) {
