@@ -51,4 +51,5 @@ public static void main(String[] args) {
         System.out.println(Arrays.toString(words));
         }
 }
+//було виконано варіант C3 - String, C17 - 6 варіант 
 
