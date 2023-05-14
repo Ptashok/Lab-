@@ -3,3 +3,4 @@ public class Milled extends Coffee {
         super (w, p, q);
     }
 }
+//використовується як функція, що викликає батьківський конструктор
