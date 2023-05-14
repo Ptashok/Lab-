@@ -1,55 +1,27 @@
-import java.util.Arrays;
-//Відсортувати слова заданого тексту за зростанням кількості голосних літер. тип Str.
+import java.util.*;
 public class Lab3 {
-public static void main(String[] args) {
-        String str = "programming is hard but i am ready to learning";
-        String[] words = str.split(" ");
-        for (int i = 0; i < words.length; i++) {
-        System.out.print(words[i] + " ");
+    public static void main(String[] args) {
+        String text = "This is a sample text with words to be sorted based on the number of vowels";
+        // Split the text into individual words
+        String[] words = text.split(" ");
+        // Sort the words based on the number of vowels
+        Arrays.sort(words, Comparator.comparingInt(Lab3::countVowels));
+        // Print the sorted words
+        System.out.println("Sorted words:");
+        for (String word : words) {
+            System.out.println(word);
         }
-        System.out.println();
-        for (int i = 0; i < words[1].length(); i++) {
-        System.out.print(words[1].charAt(i) + " ");
+    }
+    private static int countVowels(String word) {
+        int count = 0;
+        String vowels = "aeiouAEIOU";
+        for (int i = 0; i < word.length(); i++) {
+            if (vowels.contains(String.valueOf(word.charAt(i)))) {
+                count++;
+            }
         }
-        System.out.println();
-        String vowel = "aeiouy"; // голосні
-        System.out.println("Індекс кожної букви:");
-        for (int i = 0; i < words.length; i++) {
-        for (int j = 0; j < words[i].length(); j++) {
-        int index = vowel.indexOf(words[i].charAt(j));
-        System.out.print(index + " ");
-        }
-        System.out.println();
-        }
-        int[] count = new int[words.length];
-        for (int i = 0; i < words.length; i++) {
-        for (int j = 0; j < words[i].length(); j++) {
-        int index = vowel.indexOf(words[i].charAt(j));
-        if (index > 0) {
-        count[i] = count[i] + 1;
-        }
-        }
-        }
-        System.out.println("Кількість голосних у словах:");
-        for (int i = 0; i < count.length; i++) {
-        System.out.print(count[i] + " ");
-        }
-        for (int i = 0; i < count.length - 1; i++) {
-        for (int j = i+1; j < count.length; j++) {
-        if (count[i] > count[j]) {
-        int buf = count[i];
-        count[i] = count[j];
-        count[j] = buf;
-        String sbuf = words[i];
-        words[i] = words[j];
-        words[j] = sbuf;
-        }
-        }
-        }
-        System.out.println();
-        System.out.println("Відсортовані слова :");
-        System.out.println(Arrays.toString(words));
-        }
+        return count;
+    }
 }
 //було виконано варіант C3 - String, C17 - 6 варіант 
 
