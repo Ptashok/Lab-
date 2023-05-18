@@ -45,7 +45,7 @@ public class Student {
         students[3] = new Student("Robert Paulson", 18, "B", "School№4", "S004");
         students[4] = new Student("Saul Goodman", 17, "C", "School№5", "S005");
 
-        System.out.println("Sorting by age (висхідний):");
+        System.out.println("Sorting by age (висхідний метод):");
         Arrays.sort(students, Comparator.comparing(Student::getAge));
         for (Student student : students) {
             System.out.println(student.getName() + " - Age: " + student.getAge());
