@@ -1,7 +1,7 @@
 import java.util.*;
 public class Lab3 {
     public static void main(String[] args) {
-        String text = "This is a sample text with words to be sorted based on the number of vowels";
+        String text = "This is a sample text. It consists of multiple sentences. Each sentence contains words and punctuation marks! ";
         // Split the text into individual words
         String[] words = text.split(" ");
         // Sort the words based on the number of vowels
