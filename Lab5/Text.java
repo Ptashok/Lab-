@@ -2,7 +2,7 @@ class Text {
     private Sentence[] sentences;
 
     public Text(String text) {
-        // Split text into sentences
+        // Split text - Розбити текст на речення
         String[] sentenceTokens = text.trim().split("(?<=[.!?])\\s+");
 
         sentences = new Sentence[sentenceTokens.length];
