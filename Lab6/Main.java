@@ -8,21 +8,10 @@ public class Main {
         for (Coffee item : coffee) {
             System.out.print(item.getPriceWeightRatio() + " ");
         }
-        System.out.println();
-        Coffee[] d;
-        d = Coffee.priceRange(coffee, 50, 1000);
-        System.out.println("Ціна кави за наступними параметрами:");
-        assert d != null;
-        for (Coffee value : d) {
-            System.out.print(value.getPrice() + " ");
-        }
-
         Shop shop = new Shop("Mr Ivan");
-
         for (Coffee c : coffee){
             shop.addCoffee(c);
         }
-
         shop.getMinCoffeePrice();
     }
 }
