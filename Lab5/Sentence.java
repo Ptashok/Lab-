@@ -4,7 +4,7 @@ class Sentence {
     private String punctuation;
 
     public Sentence(String sentence) {
-        // Split sentence into words and punctuation marks
+        // Split sentence = Розділіть речення на слова та розставте розділові знаки
         String[] tokens = sentence.trim().split("(?<=\\b\\w+\\b)|(?<=\\p{Punct})|(?=\\s+)");
 
         List<Word> wordList = new ArrayList<>();
