@@ -1,6 +1,5 @@
 import java.util.*;
 
-// Letter class represents a single letter
 class Letter {
     private char character;
 
